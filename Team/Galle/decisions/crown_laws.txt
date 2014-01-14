@@ -1,0 +1,1003 @@
+# Crown level (de jure) laws
+# Laws ending with 0 will be default laws at game start
+
+de_jure_laws = {
+
+# ELECTION LAW
+	election_law_0 = {
+		show_as_title = yes
+		group = election_law
+		default = yes
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			holder_scope = {
+				any_demesne_title = {
+					limit = { higher_tier_than = DUKE }
+					add_law = succ_open_elective
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = election_law_1
+				revoke_law = election_law_2
+				revoke_law = election_law_3
+			}
+		}
+	}
+	election_law_1 = {
+		show_as_title = yes
+		group = election_law
+		default = no
+		
+		potential = {
+			holder_scope = { is_merchant_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			holder_scope = {
+				any_demesne_title = {
+					limit = { higher_tier_than = DUKE }
+					add_law = succ_patrician_elective
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = election_law_0
+				revoke_law = election_law_2
+				revoke_law = election_law_3
+			}
+		}
+	}
+	election_law_2 = {
+		show_as_title = yes
+		group = election_law
+		default = no
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			holder_scope = {
+				any_demesne_title = {
+					limit = { higher_tier_than = DUKE }
+					add_law = succ_feudal_elective
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = election_law_0
+				revoke_law = election_law_1
+				revoke_law = election_law_3
+			}
+		}
+	}
+	election_law_3 = {
+		show_as_title = yes
+		group = election_law
+		default = yes
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			holder_scope = {
+				any_demesne_title = {
+					limit = { higher_tier_than = DUKE }
+					add_law = succ_tanistry
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = election_law_0
+				revoke_law = election_law_1
+				revoke_law = election_law_2
+			}
+		}
+	}
+	
+# EXECUTIVE AUTHORITY
+# executive_authority_0		All laws must be voted on
+# executive_authority_1		Minor laws by decree, wartime only
+# executive_authority_2		Minor laws by decree, permanent
+# executive_authority_3		All laws by decree, political parties illegal, wartime only
+# executive_authority_4		All laws by decree, political parties illegal, permanent
+
+	executive_authority_0 = {
+		show_as_title = yes
+		group = executive_authority
+		default = yes
+		
+		potential = { is_primary_holder_title = yes }
+		allow = { always = yes }
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_1
+				revoke_law = executive_authority_2
+				revoke_law = executive_authority_3
+				revoke_law = executive_authority_4
+			}
+		}
+	}
+	executive_authority_1 = {
+		show_as_title = yes
+		group = executive_authority
+		default = no
+		
+		potential = { is_primary_holder_title = yes }
+		allow = {
+			has_law = centralization_1
+			has_law = executive_authority_0
+			holder_scope = { war = yes }
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_0
+				revoke_law = executive_authority_2
+				revoke_law = executive_authority_3
+				revoke_law = executive_authority_4
+			}
+		}
+	}
+	executive_authority_2 = {
+		show_as_title = yes
+		group = executive_authority
+		default = no
+		
+		potential = { is_primary_holder_title = yes }
+		allow = {
+			has_law = centralization_2
+			has_law = executive_authority_1
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_0
+				revoke_law = executive_authority_1
+				revoke_law = executive_authority_3
+				revoke_law = executive_authority_4
+			}
+		}
+	}
+	executive_authority_3 = {
+		show_as_title = yes
+		group = executive_authority
+		default = no
+		
+		potential = { is_primary_holder_title = yes }
+		allow = {
+			has_law = centralization_3
+			OR = {
+				has_law = executive_authority_0
+				has_law = executive_authority_2
+			}
+			holder_scope = { war = yes }
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_0
+				revoke_law = executive_authority_1
+				revoke_law = executive_authority_2
+				revoke_law = executive_authority_4
+			}
+		}
+	}
+	executive_authority_4 = {
+		show_as_title = yes
+		group = executive_authority
+		default = no
+		
+		potential = { is_primary_holder_title = yes }
+		allow = {
+			has_law = centralization_4
+			has_law = executive_authority_3
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = executive_authority_0
+				revoke_law = executive_authority_1
+				revoke_law = executive_authority_2
+				revoke_law = executive_authority_3
+			}
+		}
+	}
+	
+# PREMIERSHIP
+	premiership_0 = {
+		# No premiership
+		show_as_title = yes
+		group = premiership
+		default = yes
+		
+		potential = {
+			is_primary_holder_title = yes
+			OR = {
+				has_law = executive_authority_0
+				has_law = executive_authority_1
+				has_law = executive_authority_2
+				has_law = executive_authority_3
+			}
+		}
+		allow = { always = yes }
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = premiership_1
+				revoke_law = premiership_2
+			}
+		}
+	}
+	premiership_1 = {
+		# Appointed Premier
+		show_as_title = yes
+		group = premiership
+		default = no
+		
+		potential = {
+			is_primary_holder_title = yes
+			OR = {
+				has_law = executive_authority_0
+				has_law = executive_authority_1
+				has_law = executive_authority_2
+				has_law = executive_authority_3
+			}
+		}
+		allow = { always = yes }
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = premiership_0
+				revoke_law = premiership_2
+			}
+		}
+	}
+	premiership_2 = {
+		# Elected Premier
+		show_as_title = yes
+		group = premiership
+		default = no
+		
+		potential = {
+			is_primary_holder_title = yes
+			OR = {
+				has_law = executive_authority_0
+				has_law = executive_authority_1
+				has_law = executive_authority_2
+				has_law = executive_authority_3
+			}
+		}
+		allow = { always = yes }
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = premiership_0
+				revoke_law = premiership_1
+			}
+		}
+	}
+	
+# TERM LIMITS
+	term_limits_0 = {
+		show_as_title = yes
+		group = term_limits
+		default = yes
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			has_law = term_limits_1
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = term_limits_1
+				revoke_law = term_limits_2
+				revoke_law = term_limits_3
+			}
+		}
+	}
+	term_limits_1 = {
+		show_as_title = yes
+		group = term_limits
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			OR = {
+				has_law = term_limits_0
+				has_law = term_limits_2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = term_limits_0
+				revoke_law = term_limits_2
+				revoke_law = term_limits_3
+			}
+		}
+	}
+	term_limits_2 = {
+		show_as_title = yes
+		group = term_limits
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			OR = {
+				has_law = term_limits_1
+				has_law = term_limits_3
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = term_limits_0
+				revoke_law = term_limits_1
+				revoke_law = term_limits_3
+			}
+		}
+	}
+	term_limits_3 = {
+		show_as_title = yes
+		group = term_limits
+		
+		potential = {
+			holder_scope = { is_republic = yes }
+			is_primary_holder_title = yes
+		}
+		
+		allow = {
+			has_law = term_limits_2
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = term_limits_0
+				revoke_law = term_limits_1
+				revoke_law = term_limits_2
+			}
+		}
+	}
+
+# CENTRALIZATION
+
+	centralization_0 = {
+		show_as_title = yes
+		group = centralization
+		default = yes
+		
+		feudal_opinion = 5
+		
+		allow = {
+			holder_scope = { is_republic = no }
+			has_law = centralization_1
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			
+			set_appoint_generals = no
+			set_appoint_regents = no
+#			set_the_kings_peace = no
+#			set_the_kings_full_peace = no
+			set_protected_inheritance = no
+			set_allow_title_revokation = no
+			set_allow_free_infidel_revokation = no
+			set_allow_free_revokation = no
+		}
+		
+		city_vassal_min_levy = 0.0
+		castle_vassal_min_levy = 0.0
+		temple_vassal_min_levy = 0.0
+	}
+	
+	centralization_1 = {
+		show_as_title = yes
+		group = centralization
+		
+		feudal_opinion = -5
+		
+		allow = {
+			OR = {
+				has_law = centralization_0
+				has_law = centralization_2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_law = centralization_0 }
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		pass_effect = {
+			hidden_tooltip = {
+				if = { 
+					limit = {
+						has_law = centralization_0
+					}
+					any_de_jure_vassal = {
+						limit = {
+							OR = {
+								religion = ROOT
+								is_liege_or_above = ROOT
+							}
+						}
+						opinion = {
+							who = ROOT
+							modifier = opinion_increased_authority
+							months = 60
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			set_appoint_generals = yes
+			set_appoint_regents = no
+#			set_the_kings_peace = no
+#			set_the_kings_full_peace = no
+			set_protected_inheritance = no
+			set_allow_title_revokation = yes
+			set_allow_free_infidel_revokation = no
+			set_allow_free_revokation = no
+		}
+		
+		city_vassal_min_levy = 0.2
+		castle_vassal_min_levy = 0.2
+		temple_vassal_min_levy = 0.2
+	}
+	
+	centralization_2 = {
+		show_as_title = yes
+		group = centralization
+		
+		feudal_opinion = -10
+		
+		allow = {
+			holder_scope = { 
+				is_republic = no 
+				hidden_tooltip = {
+					NOT = { religion = norse_pagan }
+					NOT = { religion = tengri_pagan }
+					NOT = { religion = baltic_pagan }
+					NOT = { religion = finnish_pagan }
+					NOT = { religion = aztec }
+					NOT = { religion = slavic_pagan }
+				}
+				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
+			}
+			OR = {
+				has_law = centralization_1
+				has_law = centralization_3
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_law = centralization_1 }
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		pass_effect = {
+			hidden_tooltip = {
+				if = { 
+					limit = {
+						has_law = centralization_1
+					}
+					any_de_jure_vassal = {
+						limit = {
+							OR = {
+								religion = ROOT
+								is_liege_or_above = ROOT
+							}
+						}
+						opinion = {
+							who = ROOT
+							modifier = opinion_increased_authority
+							months = 60
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			set_appoint_generals = yes
+			set_appoint_regents = no
+#			set_the_kings_peace = yes
+#			set_the_kings_full_peace = no
+			set_protected_inheritance = no
+			set_allow_title_revokation = yes
+			set_allow_free_infidel_revokation = yes
+			set_allow_free_revokation = no
+		}
+		
+		city_vassal_min_levy = 0.4
+		castle_vassal_min_levy = 0.4
+		temple_vassal_min_levy = 0.4
+	}
+	
+	centralization_3 = {
+		show_as_title = yes
+		group = centralization
+		
+		feudal_opinion = -20
+		
+		allow = {
+			holder_scope = { 
+				is_republic = no 
+				hidden_tooltip = {
+					NOT = { religion = norse_pagan }
+					NOT = { religion = tengri_pagan }
+					NOT = { religion = baltic_pagan }
+					NOT = { religion = finnish_pagan }
+					NOT = { religion = aztec }
+					NOT = { religion = slavic_pagan }
+				}
+				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
+			}
+			OR = {
+				has_law = centralization_2
+				has_law = centralization_4
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.005
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_law = centralization_2 }
+					NOT = { ruled_years = 20 }
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		pass_effect = {
+			hidden_tooltip = {
+				if = { 
+					limit = {
+						has_law = centralization_2
+					}
+					any_de_jure_vassal = {
+						limit = {
+							OR = {
+								religion = ROOT
+								is_liege_or_above = ROOT
+							}
+						}
+						opinion = {
+							who = ROOT
+							modifier = opinion_increased_authority
+							months = 60
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+		
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			set_appoint_generals = yes
+			set_appoint_regents = yes
+#			set_the_kings_peace = yes
+#			set_the_kings_full_peace = no
+			set_protected_inheritance = yes
+			set_allow_title_revokation = yes
+			set_allow_free_infidel_revokation = yes
+			set_allow_free_revokation = no
+		}
+		
+		city_vassal_min_levy = 0.6
+		castle_vassal_min_levy = 0.6
+		temple_vassal_min_levy = 0.6
+	}
+	
+	centralization_4 = {
+		show_as_title = yes
+		group = centralization
+		
+		feudal_opinion = -30
+		
+		allow = {
+			holder_scope = { 
+				is_republic = no 
+				hidden_tooltip = {
+					NOT = { religion = norse_pagan }
+					NOT = { religion = tengri_pagan }
+					NOT = { religion = baltic_pagan }
+					NOT = { religion = finnish_pagan }
+					NOT = { religion = aztec }
+					NOT = { religion = slavic_pagan }
+				}
+				custom_tooltip = TT_NOT_UNREFORMED_PAGAN
+			}
+			has_law = centralization_3
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.001
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_law = centralization_3 }
+					NOT = { ruled_years = 20 }
+				}
+			}
+		}
+		
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		pass_effect = {
+			hidden_tooltip = {
+				if = { 
+					limit = {
+						has_law = centralization_3
+					}
+					any_de_jure_vassal = {
+						limit = {
+							OR = {
+								religion = ROOT
+								is_liege_or_above = ROOT
+							}
+						}
+						opinion = {
+							who = ROOT
+							modifier = opinion_increased_authority
+							months = 60
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = centralization_0
+				revoke_law = centralization_1
+				revoke_law = centralization_2
+				revoke_law = centralization_3
+				revoke_law = centralization_4
+			}
+			set_appoint_generals = yes
+			set_appoint_regents = yes
+#			set_the_kings_peace = yes
+#			set_the_kings_full_peace = yes
+			set_protected_inheritance = yes
+			set_allow_title_revokation = yes
+			set_allow_free_infidel_revokation = yes
+			set_allow_free_revokation = yes
+		}
+		
+		city_vassal_min_levy = 0.8
+		castle_vassal_min_levy = 0.8
+		temple_vassal_min_levy = 0.8
+	}
+	
+# INVESTITURE
+
+	investiture_law_0 = {
+		show_as_title = yes
+		group = investiture_law
+		default = yes
+		potential = {
+			year = 1000
+			holder_scope = { religion = catholic }
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = investiture_law_0
+				revoke_law = investiture_law_1
+			}
+			set_investiture = head
+		}
+	}
+	
+	investiture_law_1 = {
+		show_as_title = yes
+		rel_head_opinion = -30
+		free_invest_vassal_opinion = 10 # vassals with bishops will appreciate this law
+		temple_all_opinion = 25 # Bishops will be grateful to their liege for their appointment
+		group = investiture_law
+		potential = {
+			holder_scope = { religion = catholic }
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = investiture_law_0
+				revoke_law = investiture_law_1
+			}
+			set_investiture = any
+		}
+	}
+	
+	# Public Order
+	public_order_0 = {
+		show_as_title = yes
+		group = public_order
+		default = no
+		
+		potential = {
+			always = yes
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		revoke_allowed = { always = no }
+		
+		ai_will_do = { factor = 0 }
+		
+		effect = {
+			hidden_tooltip = { revoke_law = public_order_1 }
+			set_the_kings_peace = no
+		}
+	}
+	public_order_1 = {
+		show_as_title = yes
+		group = public_order
+		default = yes
+		
+		potential = {
+			always = yes
+		}
+		
+		allow = {
+			NOT = {
+				any_de_jure_vassal = {
+					any_current_enemy = {
+						OR = {  }
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = { always = no }
+		
+		ai_will_do = { factor = 0 }
+		
+		effect = {
+			hidden_tooltip = { revoke_law = public_order_1 }
+			set_the_kings_peace = no
+		}
+	}
+}

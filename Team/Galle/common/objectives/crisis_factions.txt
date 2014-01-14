@@ -1,0 +1,131 @@
+# Faction tags need to start with 'faction_'
+
+# Supported types:
+# liege_titles, liege_titles_w_claimant, character
+
+# The succession law factions have hard coded elements to ensure that the correct heir is shown in Plot and 
+# Faction interfaces and that AI faction members vote for laws in accordance with the faction goal.
+# The valid tags correspond to the law name: faction_succ_seniority, faction_succ_primogeniture, etc.
+# (faction_succ_ultimogeniture is fully supported by the code, but not currently implemented)
+
+# Political Parties shamelessly stolen from Vicky II
+# Conservatives - Pro Status Quo
+# Liberals - Anti-Taxation, Anti-Regulation, Pro Political Freedom, Neutral Social Services
+# Socialists - Neutral Taxation, Pro-Regulation, Neutral Political Freedom, Pro Social Services
+faction_conservative_party = {
+	type = liege_titles
+	
+	potential = {
+		is_ruler = yes
+		independent = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { in_faction = faction_liberal_party }
+		NOT = { in_faction = faction_socialist_party }
+	}
+	allow = {
+		is_primary_holder_title = yes
+		is_tribal_type_title = no
+		holder_scope = {
+			crownlaw_title = {
+				OR = {
+					has_law = executive_authority_0
+					has_law = executive_authority_1
+					has_law = executive_authority_2
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 1
+	}
+	membership = {
+		factor = 1
+	}
+	success = {
+	}
+	abort = {
+	}
+	abort_effect = {
+	}
+	effect = {
+	}
+}
+faction_liberal_party = {
+	type = liege_titles
+	
+	potential = {
+		is_ruler = yes
+		independent = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { in_faction = faction_conservative_party }
+		NOT = { in_faction = faction_socialist_party }
+	}
+	allow = {
+		is_primary_holder_title = yes
+		is_tribal_type_title = no
+		holder_scope = {
+			crownlaw_title = {
+				OR = {
+					has_law = executive_authority_0
+					has_law = executive_authority_1
+					has_law = executive_authority_2
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 1
+	}
+	membership = {
+		factor = 1
+	}
+	success = {
+	}
+	abort = {
+	}
+	abort_effect = {
+	}
+	effect = {
+	}
+}
+faction_socialist_party = {
+	type = liege_titles
+	
+	potential = {
+		is_ruler = yes
+		independent = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = { in_faction = faction_conservative_party }
+		NOT = { in_faction = faction_liberal_party }
+	}
+	allow = {
+		is_primary_holder_title = yes
+		is_tribal_type_title = no
+		holder_scope = {
+			crownlaw_title = {
+				OR = {
+					has_law = executive_authority_0
+					has_law = executive_authority_1
+					has_law = executive_authority_2
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 1
+	}
+	membership = {
+		factor = 1
+	}
+	success = {
+	}
+	abort = {
+	}
+	abort_effect = {
+	}
+	effect = {
+	}
+}

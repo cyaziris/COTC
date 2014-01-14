@@ -1,0 +1,13 @@
+successful_campaign = {
+	icon = 1
+	martial = 2
+	monthly_character_prestige = 0.1
+	general_opinion = 20
+}
+
+disastrous_campaign = {
+	icon = 19
+	martial = -2
+	monthly_character_prestige = -0.1
+	general_opinion = -20
+}

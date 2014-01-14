@@ -1,0 +1,1476 @@
+# The choice is made based on a weighted random, but the first factor that evaluates to >= 100 will be automatically chosen
+
+# p0 background
+0 = {
+	0 = { # Boardroom
+		factor = 1
+		modifier = {
+			factor = 0
+			is_patrician = no
+			liege = { is_patrician = no }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_feudal = yes
+				is_theocracy = yes
+				AND = {
+					is_republic = yes
+					is_merchant_republic = no
+					is_patrician = no
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			higher_tier_than = DUKE
+		}
+	}
+
+	1 = { # Office
+		factor = 1
+		modifier = {
+			factor = 0
+			is_landed = no
+		}
+	}
+
+	2 = { # Opulent Throne Room
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { tier = emperor }
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+	}
+
+	3 = { # Prison Cell
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+
+	4 = { # Cyberpunk City-Scape
+		factor = 1
+	}
+	
+	5 = { # Starship Cockpit, Space
+		factor = 100
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			trait = fighter_pilot
+			OR = {
+				light_infantry = 0.0001
+				heavy_infantry = 0.0001
+				pikemen = 0.0001
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = warship_captain }
+			in_siege = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { light_cavalry = 0.0001 }
+			NOT = { knights = 0.0001 }
+			NOT = { horse_archers = 0.0001 }
+			NOT = { archers = 0.0001 }
+		}
+		modifier = {
+			factor = 0
+			location = { terrain = ocean }
+		}
+	}
+	
+	6 = { # Starship Bridge, Hyperspace
+		factor = 100
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			trait = fighter_pilot
+			OR = {
+				light_infantry = 0.0001
+				heavy_infantry = 0.0001
+				pikemen = 0.0001
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = marine_colonel
+			in_siege = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { light_cavalry = 0.0001 }
+			NOT = { knights = 0.0001 }
+			NOT = { horse_archers = 0.0001 }
+			NOT = { archers = 0.0001 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { location = { terrain = ocean } }
+		}
+	}
+	7 = { # Starship Bridge, Space
+		factor = 100
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fighter_pilot }
+			in_siege = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { light_infantry = 0.0001 }
+			NOT = { heavy_infantry = 0.0001 }
+			NOT = { pikemen = 0.0001 }
+		}
+		modifier = {
+			factor = 0
+			location = { terrain = ocean }
+		}
+	}
+	8 = { # Starship Bridge, Hyperspace
+		factor = 100
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			trait = marine_colonel
+			in_siege = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { light_infantry = 0.0001 }
+			NOT = { heavy_infantry = 0.0001 }
+			NOT = { pikemen = 0.0001 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { location = { terrain = ocean } }
+		}
+	}
+	9 = { # Underground Command Center
+		factor = 1
+		modifier = {
+			factor = 0
+			in_siege = no
+			NOT = { has_job_title = job_marshal }
+		}
+		modifier = {
+			factor = 100
+			in_siege = yes
+		}
+	}
+	10 = { # Research Lab
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = detached_priest }
+			NOT = { trait = martial_cleric }
+			NOT = { trait = scholarly_theologian }
+			NOT = { trait = mastermind_theologian }
+			NOT = { has_job_title = job_scientist }
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+	}
+	11 = { # Steppe
+		factor = 1
+		modifier = {
+			factor = 0
+			#NOT = { capital_scope = { terrain = steppe } }
+			#NOT = { capital_scope = { terrain = plains } }
+			NOT = { culture_group = altaic }
+		}
+		modifier = {
+			factor = 10
+			culture_group = altaic
+			NOT = { culture = turkish }
+		}
+	}
+	12 = { # Ocean w ships
+		factor = 0
+		#modifier = {
+			#factor = 0
+			#NOT = { location = { terrain = ocean } }
+		#}
+	}
+	13 = { # Muslim interior
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+	}
+	14 = { # Harem
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+	}
+	15 = { # Muslim interior 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+	}
+
+	16 = { # Mongol camp 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { culture = mongol }
+		}
+	}
+
+	17 = { # Mongol camp 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { culture = mongol }
+		}
+	}
+
+	18 = { # Papal palace
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { has_landed_title = k_papal_state }
+		}
+	}
+
+	19 = { # Muslim mosque
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+
+		modifier = {
+			factor = 0
+			is_ruler = no
+			
+			}
+		modifier = {
+			factor = 0
+			OR = {
+				is_ruler = no
+				is_theocracy = no
+			}
+		}
+	}
+
+	20 = { # Pagan human sacrifice
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = pagan_group }
+		}
+	}
+}
+
+# p1 hair  --- WARNING! Property 1 MUST be Hair, otherwise the hair hiding helmets wont work ---
+1 = {
+	0 = { # Completely bald
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_female = no
+			NOT = {
+				age = 50
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_female = yes
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	1 = { # Black Adder
+		factor = 1
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	2 = { # Page
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	3 = { # Synth
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	4 = { # Long Straight
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	5 = { # Long Curly
+		factor = 1
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	6 = {  # Tonsure
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			is_ruler = yes
+		}
+		modifier = {
+			factor = 0
+			is_female = no
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0
+			is_female = no
+			NOT = { trait = detached_priest }
+			NOT = { trait = martial_cleric }
+			NOT = { trait = scholarly_theologian }
+			NOT = { trait = mastermind_theologian }
+			NOT = { has_job_title = job_spiritual }
+		}
+
+		modifier = {
+			factor = 50
+			is_female = no
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	7 = {  # Short
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	8 = { # Short Curly
+		factor = 1
+	}
+	
+	9 = {  # Short Uncouth
+		factor = 1
+		modifier = {
+			factor = 5
+			religion_group = pagan_group
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	10 = {  # Long Uncouth
+		factor = 1
+		
+		modifier = {
+			factor = 5
+			religion_group = pagan_group
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	11 = { # Balding
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_female = no
+			NOT = {
+				age = 50
+			}
+		}
+	}
+	
+	12 = { # Marine
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	13 = { # Mohawk
+		factor = 1
+	}
+}
+
+# p2 base
+#2 = {
+#}
+
+# p3 clothes
+3 = {
+	
+	0 = { # Formal Clothes A
+		factor = 3
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { liege = { is_close_relative = PREV } }
+		}
+		modifier = {
+			factor = 4
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.25
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = BARON
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = COUNT
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = DUKE
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = KING
+		}
+	}
+	
+	1 = { # Formal Clothes B
+		factor = 3
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { liege = { is_close_relative = PREV } }
+		}
+		modifier = {
+			factor = 4
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.25
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = BARON
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = COUNT
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = DUKE
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = KING
+		}
+	}
+	
+	2 = { # Formal Clothes C
+		factor = 3
+		modifier = {
+			factor = 0
+			is_landed = no
+			NOT = { liege = { is_close_relative = PREV } }
+		}
+		modifier = {
+			factor = 4
+			trait = disciplined
+		}
+		modifier = {
+			factor = 0.25
+			trait = carefree
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = BARON
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = COUNT
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = DUKE
+		}
+		modifier = {
+			factor = 1.25
+			higher_tier_than = KING
+		}
+	}
+	
+	3 = { # Casual Clothes A
+		factor = 1
+		modifier = {
+			factor = 4
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.25
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.5
+			trait = proud
+		}
+	}
+	
+	4 = { # Casual Clothes B
+		factor = 1
+		modifier = {
+			factor = 4
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.25
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.5
+			trait = proud
+		}
+	}
+	
+	5 = { # Casual Clothes C
+		factor = 1
+		modifier = {
+			factor = 4
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.25
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = humble
+		}
+		modifier = {
+			factor = 0.5
+			trait = proud
+		}
+	}
+	
+	6 = { # Science Clothes A
+		factor = 50
+		modifier = {
+			factor = 0
+			NOT = { trait = detached_priest }
+			NOT = { trait = martial_cleric }
+			NOT = { trait = scholarly_theologian }
+			NOT = { trait = mastermind_theologian }
+			NOT = { has_job_title = job_scientist }
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+	}
+	7 = { # Science Clothes B
+		factor = 50
+		modifier = {
+			factor = 0
+			NOT = { trait = detached_priest }
+			NOT = { trait = martial_cleric }
+			NOT = { trait = scholarly_theologian }
+			NOT = { trait = mastermind_theologian }
+			NOT = { has_job_title = job_scientist }
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+	}
+	
+	8 = { # Spacesuit
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			in_battle = no
+			NOT = { trait = fighter_pilot }
+		}
+		modifier = {
+			factor = 0
+			in_siege = yes
+			NOT = { trait = figher_pilot }
+		}
+	}
+	9 = { # Combat Gear
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			in_siege = no
+			NOT = { trait = marine_colonel }
+		}
+	}
+	
+	10 = { # Dress Uniform
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+			NOT = { has_job_title = job_marshal }
+			OR = {
+				is_feudal = no
+				religion = neo_feudal
+				religion = space_pirate
+			}
+		}
+		modifier = {
+			factor = 0.2
+			in_command = no
+		}
+		modifier = {
+			factor = 4
+			trait = disciplined
+			in_command = no
+		}
+		modifier = {
+			factor = 0.25
+			trait = carefree
+			in_command = no
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+			in_command = no
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+			in_command = no
+		}
+	}
+	
+	11 = { # Prison Uniform
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+}
+
+# p4 beard
+4 = {
+	0 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religion_group = muslim
+			NOT = { graphical_culture = muslimgfx }
+		}
+		modifier = {
+			factor = 30
+			religion_group = christian
+			OR = {
+				culture = greek
+				culture = italian
+			}
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+		modifier = {
+			factor = 15
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+	}
+	1 = {
+		factor = 1
+	}
+	2 = {
+		factor = 1
+	}
+	3 = {
+		factor = 1
+	}
+	4 = {
+		factor = 1
+	}
+	5 = {
+		factor = 1
+	}
+	6 = {
+		factor = 1
+	}
+	7 = {
+		factor = 1
+	}
+	8 = {
+		factor = 1
+	}
+	9 = {
+		factor = 1
+		modifier = {
+			factor = 5
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+	}
+	10 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religion_group = muslim
+			NOT = { graphical_culture = muslimgfx }
+		}
+		modifier = {
+			factor = 20
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+		modifier = {
+			factor = 60
+			religion_group = christian
+			OR = {
+				culture = greek
+				culture = italian
+			}
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+	}
+}
+
+# p5 headgear
+5 = {
+	0 = { # Crown A
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			NOT = { higher_tier_than = DUKE }
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+		}
+	}
+	
+	1 = { # Crown B
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { religion = neo_feudal }
+			NOT = { religion = terran_imperial }
+		}
+		modifier = {
+			factor = 0
+			NOT = { higher_tier_than = DUKE }
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+		}
+	}
+
+	2 = { # Casual Headgear A
+		factor = 1
+	}
+
+	3 = { # Casual Headgear B
+		factor = 1
+	}
+
+	4 = { # Hair Accessory A
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = extraverted
+		}
+		modifier = {
+			factor = 0.5
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 4
+			trait = beautiful
+		}
+		modifier = {
+			factor = 2
+			trait = fair
+		}
+		modifier = {
+			factor = 0.5
+			trait = homely
+		}
+		modifier = {
+			factor = 0.25
+			trait = ugly
+		}
+	}
+
+	5 = { # Hair Accessory B
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = extraverted
+		}
+		modifier = {
+			factor = 0.5
+			trait = introverted
+		}
+		modifier = {
+			factor = 2
+			trait = carefree
+		}
+		modifier = {
+			factor = 0.5
+			trait = disciplined
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 4
+			trait = beautiful
+		}
+		modifier = {
+			factor = 2
+			trait = fair
+		}
+		modifier = {
+			factor = 0.5
+			trait = homely
+		}
+		modifier = {
+			factor = 0.25
+			trait = ugly
+		}
+	}
+	
+	6 = { # Technical Headgear
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = detached_priest }
+			NOT = { trait = martial_cleric }
+			NOT = { trait = scholarly_theologian }
+			NOT = { trait = mastermind_theologian }
+			NOT = { has_job_title = job_scientist }
+		}
+		modifier = {
+			factor = 2
+			trait = open_minded
+		}
+		modifier = {
+			factor = 2
+			trait = skeptical
+		}
+		modifier = {
+			factor = 0.5
+			trait = close_minded
+		}
+		modifier = {
+			factor = 0.5
+			trait = spiritual
+		}
+	}
+
+	7 = { # Eyepatch
+		factor = 100
+		modifier = {
+			factor = 0
+		}
+	}
+	
+	8 = { # Spacesuit Helmet
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			in_battle = no
+			NOT = { trait = fighter_pilot }
+		}
+		modifier = {
+			factor = 0
+			in_siege = yes
+			NOT = { trait = figher_pilot }
+		}
+	}
+
+	9 = { # Combat Helmet
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			in_siege = no
+			NOT = { trait = marine_colonel }
+		}
+	}
+
+	10 = { # Dress Uniform Cap
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+			NOT = { has_job_title = job_marshal }
+			OR = {
+				is_feudal = no
+				religion = neo_feudal
+				religion = space_pirate
+			}
+		}
+		modifier = {
+			factor = 0.2
+			in_command = no
+		}
+		modifier = {
+			factor = 4
+			trait = disciplined
+			in_command = no
+		}
+		modifier = {
+			factor = 0.25
+			trait = carefree
+			in_command = no
+		}
+		modifier = {
+			factor = 2
+			trait = proud
+			in_command = no
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+			in_command = no
+		}
+	}
+
+	# Blank
+	11 = {
+		factor = 10
+	}
+}
+
+# p6 imprisoned
+6 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+	}
+
+	1 = { # prisoner
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+}
+
+# p7 scars
+7 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = maimed
+				trait = wounded
+				trait = scarred
+			}
+		}
+   	}
+
+	1 = { # scar 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+				}
+			}
+		}
+   	}
+
+	2 = { # scar 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+				}
+			}
+		}
+   	}
+
+	3 = { # scar 3
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+				}
+			}
+		}
+   	}
+
+	4 = { # scar 4
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+				}
+			}
+		}
+   	}
+}
+
+# p8 red dots
+8 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = has_measles
+				trait = has_small_pox
+			}
+		}
+ 	}
+
+	1 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = has_measles
+					trait = has_small_pox
+				}
+			}
+		}
+  	}
+}
+
+# p9 boils
+9 = {
+
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = has_bubonic_plague
+			}
+		}
+ 	}
+
+	1 = { # boils
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = has_bubonic_plague
+				}
+			}
+		}
+ 	}
+ 	
+}
+
+# p10 blinded
+10 = {
+	0 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = blinded
+		}
+	}
+	
+	1 =  {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = {
+				trait = blinded
+			}
+		}
+	}
+}

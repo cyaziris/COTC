@@ -1,0 +1,732 @@
+e_rebels = {
+	rebel = yes
+	landless = yes
+	primary = yes
+
+	culture = swedish
+	tribe = yes
+
+	color={ 0 0 0 }
+	color2={ 0 0 0 }
+}
+
+e_pirates = {
+	pirate = yes
+	landless = yes
+	primary = yes
+
+	culture = swedish
+	tribe = yes
+
+	color={ 0 0 0 }
+	color2={ 0 0 0 }
+}
+
+# Religion Head Titles
+d_sacred_engine = {
+	short_name = yes
+	controls_religion = machine_cult
+	
+	landless = yes
+	primary = yes
+	dynasty_title_names = no
+}
+d_orthodoxy = {
+	capital = 1 # Sol
+	short_name = yes
+	controls_religion = orthodox
+	
+	landless = yes
+	primary = yes
+	dynasty_title_names = no
+}
+
+# Landed Titles
+e_terran = {
+	color = { 0 128 255 }
+	color2 = { 192 192 192 }
+	
+	capital = 1 # Sol
+
+	republican = "Terran Republic"
+	imperial = "Terran Empire"
+	short_name = yes
+	
+	controls_religion = confederate
+	controls_religion = republican
+	controls_religion = imperial
+	
+	primary = yes
+	dynasty_title_names = no
+	
+	# TERRAN NAVY
+	k_terran_navy = {
+		color = { 0 0 128 }
+		color2 = { 192 192 192 }
+		capital = 1 # Sol
+		
+		short_name = yes
+		
+		confederate = "Confederate Navy"
+		imperial = "Imperial Navy"
+		
+		title = "GRANDADMIRAL"
+		foa = "SIR"
+		
+		# Always exists
+		landless = yes
+		
+		dynasty_title_names = no
+		
+		modifier = k_terran_navy_modifier
+		
+		# SPECIAL FLEETS
+		d_imperial_guard = {
+			color = { 128 0 128 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			
+			religion = imperial
+			
+			holy_order = yes
+			
+			title = "LORDCOMMANDER"
+			foa = "MYLORD"
+			
+			landless = yes
+			
+			dynasty_title_names = no
+			modifier = d_imperial_guard_modifier
+		}
+		
+		# STANDARD FLEETS
+		d_first_fleet = {
+			color = { 200 0 0 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			
+			title = "FLEETADMIRAL"
+			foa = "SIR"
+			
+			landless = yes
+			
+			dynasty_title_names = no
+			modifier = d_terran_fleet_modifier
+		}
+		d_second_fleet = {
+			color = { 0 200 0 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			
+			title = "FLEETADMIRAL"
+			foa = "SIR"
+			
+			landless = yes
+			
+			dynasty_title_names = no
+			modifier = d_terran_fleet_modifier
+		}
+		d_third_fleet = {
+			color = { 0 0 200 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			
+			title = "FLEETADMIRAL"
+			foa = "SIR"
+			
+			landless = yes
+			
+			dynasty_title_names = no
+			modifier = d_terran_fleet_modifier
+		}
+		d_fourth_fleet = {
+			color = { 200 200 0 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			
+			title = "FLEETADMIRAL"
+			foa = "SIR"
+			
+			landless = yes
+			
+			dynasty_title_names = no
+			modifier = d_terran_fleet_modifier
+		}
+		d_fifth_fleet = {
+			color = { 0 200 200 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			
+			title = "FLEETADMIRAL"
+			foa = "SIR"
+			
+			landless = yes
+			
+			dynasty_title_names = no
+			modifier = d_terran_fleet_modifier
+		}
+		d_sixth_fleet = {
+			color = { 200 0 200 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			
+			title = "FLEETADMIRAL"
+			foa = "SIR"
+			
+			landless = yes
+			
+			dynasty_title_names = no
+			modifier = d_terran_fleet_modifier
+		}
+		d_seventh_fleet = {
+			color = { 200 200 200 }
+			color2 = { 192 192 192 }
+			short_name = yes
+			
+			title = "FLEETADMIRAL"
+			foa = "SIR"
+			
+			landless = yes
+			
+			dynasty_title_names = no
+			modifier = d_terran_fleet_modifier
+		}
+	}
+	
+	
+	# CORE WORLDS
+	k_terran_commonwealth = {
+		color = { 128 128 255 }
+		color2 = { 192 192 192 }
+		
+		capital = 1 # Sol
+		imperial = "Solar Directorate"
+		short_name = yes
+		
+		dynasty_title_names = no
+		
+		d_sol = {
+			c_sol = {
+				b_earth = {
+					# Holy site for just about everyone
+					holy_site = confederate
+					holy_site = republican
+					holy_site = imperial
+					holy_site = orthodox
+					holy_site = pilgrim
+					holy_site = solarian
+				}
+				b_luna = {
+				}
+				b_mars = {
+				}
+				b_ceres = {
+				}
+				b_europa = {
+				}
+				b_ganymede = {
+				}
+				b_io = {
+				}
+				b_titan = {
+				}
+			}
+			c_alpha_centauri = {
+				b_new_earth = {
+				}
+				b_second_sun = {
+				}
+			}
+		}
+		d_procyon = {
+			capital = 3 # Procyon
+			
+			c_procyon = {
+			}
+			c_sirius = {
+			}
+		}
+		d_tau_ceti = {
+			capital = 5 # Tau Ceti
+			
+			c_tau_ceti = {
+			}
+			c_epsilon_eridani = {
+				b_eridani_iv = {
+					holy_site = orthodox
+				}
+			}
+			c_eta_cassiopeia = {
+			}
+		}
+		d_altair = {
+			capital = 9 # Altair
+			c_altair = {
+			}
+			c_61_cygni = {
+			}
+		}
+		d_draconis = {
+			capital = 11 # Sigma Draconis
+			c_sigma_draconis = {
+			}
+			c_delta_pavonis = {
+			}
+			c_beta_hydri = {
+			}
+			c_epsilon_indi = {
+			}
+		}
+	}
+	
+	k_frontier = {
+		color = { 0 0 255 }
+		color2 = { 200 200 200 }
+		
+		culture = anglo_frontiersman
+		religion = confederate
+		
+		capital = 17 # Armstrong
+		
+		d_armstrong = {
+			capital = 17 # Armstrong
+			c_armstrong = {
+			}
+			c_aldrin = {
+			}
+			c_heartland = {
+			}
+			c_collins = {
+			}
+		}
+		d_ride = {
+			capital = 21 # Ride
+			c_ride = {
+			}
+			c_challenger = {
+			}
+			c_gemini = {
+			}
+		}
+		d_shepard = {
+			capital = 24 # Shepard
+			c_shepard = {
+			}
+			c_jemison = {
+			}
+			c_sharman = {
+			}
+		}
+		d_glenn = {
+			capital = 27 # Glenn
+			c_glenn = {
+			}
+			c_touchstone = {
+			}
+			c_weyland = {
+			}
+		}
+		d_apollo = {
+			capital = 30 # Apollo
+			c_apollo = {
+			}
+			c_beowulf = {
+			}
+		}
+	}
+	
+	k_xingjie = {
+		color = { 255 0 0 }
+		color = { 255 255 0 }
+		
+		culture = sino_xingjie
+		religion = confederate
+		
+		capital = 32 # Huangjing
+		
+		d_huangjing = {
+			capital = 32 # Huangjing
+			c_huangjing = {
+			}
+			c_huanglong = {
+			}
+			c_yang_liwei = {
+			}
+		}
+		d_qinglong = {
+			capital = 35 # Qinglong
+			c_qinglong = {
+			}
+			c_fei_junlong = {
+			}
+			c_nie_haisheng = {
+			}
+		}
+		d_zhuque = {
+			capital = 38 # Zhuque
+			c_zhuque = {
+			}
+			c_jing_haipeng = {
+			}
+			c_liu_boming = {
+			}
+			c_zhai_zhigang = {
+			}
+		}
+		d_baihu = {
+			capital = 42 # Baihu
+			c_baihu = {
+			}
+			c_liu_yang = {
+			}
+			c_liu_wang = {
+			}
+		}
+		d_xuanwu = {
+			capital = 45 # Xuanwu
+			c_xuanwu = {
+			}
+			c_zhang_xiaoguang = {
+			}
+			c_wang_yaping = {
+			}
+		}
+	}
+	
+	k_cielia = {
+		color = { 255 255 0 }
+		color2 = { 200 200 200 }
+		
+		culture = hispanic_cielian
+		religion = confederate
+		
+		d_vega = {
+			c_vega = {
+			}
+			c_prosperidad = {
+			}
+			c_nuevo_sol = {
+			}
+		}
+		d_sexto_sol = {
+			culture = mesoamerican_cielian
+			c_nahui_ahtle = {
+			}
+			c_tietlioh = {
+			}
+			c_nantli = {
+			}
+			c_tlexochtli = {
+			}
+			c_huehca = {
+			}
+		}
+		d_bolivar = {
+			c_estrella_de_bolivar = {
+			}
+			c_esperanze = {
+			}
+			c_santa_maria = {
+			}
+			c_ahora_la_luz = {
+			}
+		}
+		d_encrucijada = {
+			c_encrucijada = {
+			}
+			c_nuevo_santuario = {
+			}
+			c_hermanes_de_oro = {
+			}
+			c_escudo = {
+			}
+		}
+		d_frontera = {
+			c_dom_frontera = {
+			}
+			c_puerto_del_cielo = {
+			}
+			c_illuminacion = {
+			}
+		}
+	}
+	
+	k_al_samawat = {
+		color = { 0 255 0 }
+		color2 = { 200 200 200 }
+		
+		culture = arab_samawati
+		religion = confederate
+		
+		d_jadiid_makkah = {
+			c_jadiid_makkah = {
+			}
+			c_ginaynat = {
+			}
+			c_burj_najma = {
+			}
+			c_farah = {
+			}
+			c_israfil = {
+			}
+		}
+		d_jibrail = {
+			c_sakinat_al_ruh = {
+			}
+			c_jibrail = {
+			}
+			c_al_jisr = {
+			}
+		}
+		d_amal = {
+			c_amal = {
+			}
+			c_mikhail = {
+			}
+			c_tawam_shams = {
+			}
+		}
+		d_al_bawaba = {
+			c_al_bawaba = {
+			}
+			c_izrail = {
+			}
+			c_al_jazira = {
+			}
+		}
+		d_al_hadd = {
+			c_xadra_shams = {
+			}
+			c_kathib = {
+			}
+			c_al_hadd = {
+			}
+			c_jadiid_qurtuba = {
+			}
+		}
+	}
+	
+	k_zenye_nyota_angani = {
+		color = { 255 255 255 }
+		color2 = { 200 200 200 }
+		
+		culture = east_afro_angani
+		religion = confederate
+		
+		d_ndia_panda = {
+			c_ndia_panda = {
+			}
+			c_kimbilio = {
+			}
+			c_tengemano = {
+			}
+		}
+		d_mpya_zanzibar = {
+			c_mpya_ya_zanzibar = {
+			}
+			c_angani_moto = {
+			}
+			c_upeo_wa_macho = {
+			}
+		}
+		d_nyota_mwisho = {
+			c_nyota_mwisho = {
+			}
+			c_bandari = {
+			}
+			c_sisi_alifanya_hivyo = {
+			}
+		}
+		d_afolayan = {
+			culture = west_afro_angani
+			c_afolayan = {
+			}
+			c_anansi = {
+			}
+			c_nyame = {
+			}
+		}
+		d_adwa = {
+			c_abbaba = {
+			}
+			c_menelik = {
+			}
+			c_addis_adwa = {
+			}
+			c_addis_saba = {
+			}
+			c_haile_selassie = {
+			}
+		}
+	}
+	
+	k_centauri_reach = {
+		color = { 50 50 50 }
+		color2 = { 200 200 200 }
+		
+		religion = confederate
+		
+		d_gagarin = {
+			culture = russo_centauri
+			
+			c_gagarin = {
+			}
+			c_hu_lao_gate = {
+				culture = sino_centauri
+			}
+			c_novyy_arkhangelsk = {
+			}
+		}
+		d_tereshkova = {
+			culture = russo_centauri
+			c_tereshkova = {
+			}
+			c_korolev = {
+			}
+			c_tannhauser_gate = {
+				culture = anglo_centauri
+			}
+		}
+		d_tengoku = {
+			culture = japanese_centauri
+			c_tengoku = {
+			}
+			c_sotogawa_no_ten = {
+			}
+		}
+	}
+}
+
+e_witch_head = {
+	k_new_frontier = {
+		culture = anglo_frontiersman
+		religion = seperatist
+	}
+	k_avalon_march = {
+		culture = anglo_frontiersman
+		religion = seperatist
+	}
+	k_jion = {
+		culture = japanese_jionese
+		religion = seperatist
+	}
+	k_witch_head_nebula = {
+	}
+	k_veil_nebula = {
+	}
+}
+
+e_centauri = {
+	k_strugatsky = {
+		culture = russo_centauri
+		religion = seperatist
+	}
+	k_novyy_edem = {
+		culture = russo_edemite
+		religion = seperatist
+	}
+	k_helix_nebula = {
+		d_upper_helix = {
+			c_port_simon = {
+			}
+			c_helix_702 = {
+			}
+			c_helix_338 = {
+			}
+			c_helix_219 = {
+			}
+		}
+		d_lower_helix = {
+			c_eye_of_god = {
+			}
+			c_helix_153 = {
+			}
+			c_helix_794 = {
+			}
+			c_helix_843 = {
+			}
+		}
+	}
+}
+
+e_taiping = {
+	k_xin_yuzhou = {
+		culture = sino_bianjing
+		religion = seperatist
+	}
+	k_bianjiang = {
+		culture = sino_bianjiang
+		religion = seperatist
+	}
+}
+
+e_orion = {
+	k_orion_reach = {
+	}
+	k_orion_nebula = {
+	}
+	k_horsehead_nebula = {
+	}
+	k_flame_nebula = {
+	}
+}
+
+e_veil = {
+	k_akkala = {
+	}
+	k_maphata_graho = {
+	}
+	k_veil_nebula = {
+	}
+}
+
+# Assorted Mercenaries and Pirates
+d_wolf_pack = {
+}
+d_dread_angels = {
+}
+d_night_sky = {
+}
+d_free_legion = {
+}
+d_hazard_corps = {
+}
+d_argus_security = {
+}
+d_black_knights = {
+}
+d_red_lotus = {
+}
+d_harmony_development_society = {
+}
+d_stars_of_destiny = {
+}
+d_thousand_ronin = {
+}
+
+######################################
+# Canonical Megacorps
+######################################
+
+# TERRAN:
+
+b_weyland = {
+	culture = anglo_terran
+	religion = confederate
+}
+b_afolayan = {
+	culture = west_afro_terran
+	religion = confederate
+}
+b_ahmad = {
+	culture = arab_terran
+	religion = confederate
+}
+b_kojima = {
+	culture = japanese_terran
+	religion = confederate
+}
+b_jia = {
+	culture = sino_terran
+	religion = confederate
+}

@@ -1,0 +1,230 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+EVTDESCFACTIONNAMES0;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran Confederation.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé Confédération Terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES1;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran Confederation.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé Confédération Terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES2;You have decreed that the [e_terran_confederation.GetName] be renamed the Terran Empire.;Vous avez décrêté que [e_terran_confederation.GetName] serait rennomé Empire terrien.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES3;By decree of [From.GetTitle] [From.GetFullName], the Terran state has been renamed the Terran Empire.;Par décrêt de [From.GetTitle] [From.GetFullName], l'état terrien a été rennomé Empire terrien.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES4;You have decreed that the [e_terran_confederation.GetName] be renamed the Terran Hegemony.;Vous avez décrêté que [e_terran_confederation.GetName] serait rennomé Hégémonie terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES5;By decree of [From.GetTitle] [From.GetFullName], the Terran state has been renamed the Terran Hegemony.;Par décrêt de [From.GetTitle] [From.GetFullName], l'état terrien a été rennomé Hégémonie terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES6;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran Republic.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé République terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES7;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran Republic.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé République terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES8;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran Directorate.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé Directorat terrien;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES9;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran Directorate.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé Directorat terrien.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES10;You have decreed that the [e_terran_confederation.GetName] be renamed the Holy Terran Empire.;You have decreed that the [e_terran_confederation.GetName] be renamed the Holy Terran Empire.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES11;By decree of [From.GetTitle] [From.GetFullName], the Terran state has been renamed the Holy Terran Empire.;Par décrêt de [From.GetTitle] [From.GetFullName], l'état terrien a été rennomé Saint Empire terrien.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES12;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran People's Union.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé Union des peuples terriens.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES13;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran People's Union.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé Union des peuples terriens.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES14;Due to changes in ideology and its form of government, the [e_terran_confederation.GetName] has been renamed the Terran People's Republic.;En raison de changements idéologiques et gouvernementaux, le [e_terran_confederation.GetName] a été rennomé République populaire terrienne.;;;;;;;;;;;;x
+EVTDESCFACTIONNAMES15;Due to changes in ideology and its form of government, the Terran state has been renamed the Terran People's Republic.;En raison de changements idéologiques et gouvernementaux, l'état terrien a été rennomé République populaire terrienne.;;;;;;;;;;;;x
+e_terran_confederation;Terran Confederation;Confédération terrienne;;;;;;;;;;;;x
+e_terran_confederation_ADJ;Confederate;Confédéré;;;;;;;;;;;;x
+k_terran_federal_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_federal_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_republic_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_republic_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_imperial_authority;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_imperial_authority_ADJ;Terran State Authority;Autorité nationale terrienne;;;;;;;;;;;;x
+k_terran_navy_ADJ;Confederate Naval;naval confédéré;;;;;;;;;;;;x
+k_terran_navy;Confederate Space Command;Commandement spatial confédéré;;;;;;;;;;;;x
+k_terran_navy_ADJ;Confederate Naval;naval confédéré;;;;;;;;;;;;x
+d_terran_first_fleet;First Confederate Fleet;Première flotte confédérée;;;;;;;;;;;;x
+d_terran_first_fleet_ADJ;First Confederate Fleet;Première flotte confédérée;;;;;;;;;;;;x
+d_terran_second_fleet;Second Confederate Fleet;Seconde flotte confédérée;;;;;;;;;;;;x
+d_terran_second_fleet_ADJ;Second Confederate Fleet;Seconde flotte confédérée;;;;;;;;;;;;x
+d_terran_third_fleet;Third Confederate Fleet;Troisième flotte confédérée;;;;;;;;;;;;x
+d_terran_third_fleet_ADJ;Third Confederate Fleet;Troisième flotte confédérée;;;;;;;;;;;;x
+d_terran_fourth_fleet;Fourth Confederate Fleet;Quatrième flotte confédérée;;;;;;;;;;;;x
+d_terran_fourth_fleet_ADJ;Fourth Confederate Fleet;Quatrième flotte confédérée;;;;;;;;;;;;x
+d_terran_fifth_fleet;Fifth Confederate Fleet;Cinquième flotte confédérée;;;;;;;;;;;;x
+d_terran_fifth_fleet_ADJ;Fifth Confederate Fleet;Cinquième flotte confédérée;;;;;;;;;;;;x
+k_terran_commonwealth;Terran Commonwealth;Commonwealth terrien;;;;;;;;;;;;x
+k_terran_commonwealth_ADJ;Terran Commonwealth;Commonwealth terrien;;;;;;;;;;;;x
+d_terran_commonwealth_fleet;Solar Guard;Garde Solaire;;;;;;;;;;;;x
+d_terran_commonwealth_fleet_ADJ;Solar Guard;Garde Solaire;;;;;;;;;;;;x
+d_sol;Sol;Sol;;;;;;;;;;;;x
+d_sol_ADJ;Solar;Solaire;;;;;;;;;;;;x
+c_sol;Sol;Sol;;;;;;;;;;;;x
+c_sol_ADJ;Solar;Solaire;;;;;;;;;;;;x
+b_earth;Earth;Terre;;;;;;;;;;;;x
+b_earth_ADJ;Terran;Terrien;;;;;;;;;;;;x
+b_moon;The Moon;La Lune;;;;;;;;;;;;x
+b_moon_ADJ;Lunar;Lunaire;;;;;;;;;;;;x
+b_mars;Mars;Mars;;;;;;;;;;;;x
+b_mars_ADJ;Martian;Martien;;;;;;;;;;;;x
+b_ceres;Ceres;Ceres;;;;;;;;;;;;x
+b_ceres_ADJ;Cerean;Céréen;;;;;;;;;;;;x
+b_europa;Europa;Europa;;;;;;;;;;;;x
+b_europa_ADJ;Europan;Europarien;;;;;;;;;;;;x
+b_ganymede;Ganymede;Ganymede;;;;;;;;;;;;x
+b_ganymede_ADJ;Ganymedian;Ganymèdien;;;;;;;;;;;;x
+b_titan;Titan;Titan;;;;;;;;;;;;x
+b_titan_ADJ;Titanic;Titanien;;;;;;;;;;;;x
+c_alpha_centauri;Alpha Centauri;Alpha Centauri;;;;;;;;;;;;x
+c_alpha_centauri_ADJ;Centauri;Centauri;;;;;;;;;;;;x
+b_alpha_centauri_ii;Alpha Centauri II;Alpha Centauri II;;;;;;;;;;;;x
+b_alpha_centauri_ii_ADJ;Alpha Centauri II;Alpha Centauri II;;;;;;;;;;;;x
+b_alpha_centauri_iii;Alpha Centauri III;Alpha Centauri III;;;;;;;;;;;;x
+b_alpha_centauri_iii_ADJ;Alpha Centauri III;Alpha Centauri III;;;;;;;;;;;;x
+b_alpha_centauri_iii_b;Alpha Centauri III-B;Alpha Centauri III-B;;;;;;;;;;;;x
+b_alpha_centauri_iii_b_ADJ;Alpha Centauri III-B;Alpha Centauri III-B;;;;;;;;;;;;x
+b_alpha_centauri_iv;Alpha Centauri IV;Alpha Centauri IV;;;;;;;;;;;;x
+b_alpha_centauri_iv_ADJ;Alpha Centauri IV;Alpha Centauri IV;;;;;;;;;;;;x
+d_sirius;Sirius;Sirius;;;;;;;;;;;;x
+d_sirius_ADJ;Sirian;Siriusien;;;;;;;;;;;;x
+c_sirius;Sirius;Sirius;;;;;;;;;;;;x
+c_sirius_ADJ;Sirian;Siriusien;;;;;;;;;;;;x
+b_sirius_iii;Sirius III;Sirius III;;;;;;;;;;;;x
+b_sirius_iii_ADJ;Sirius III;Sirius III;;;;;;;;;;;;x
+b_sirius_iii_b;Sirius III-B;Sirius III-B;;;;;;;;;;;;x
+b_sirius_iii_b_ADJ;Sirius III-B;Sirius III-B;;;;;;;;;;;;x
+b_sirius_iii_c;Sirius III-C;Sirius III-C;;;;;;;;;;;;x
+b_sirius_iii_c_ADJ;Sirius III-C;Sirius III-C;;;;;;;;;;;;x
+b_sirius_vii_b;Sirius VII-B;Sirius VII-B;;;;;;;;;;;;x
+b_sirius_vii_b_ADJ;Sirius VII-B;Sirius VII-B;;;;;;;;;;;;x
+b_sirius_vii_c;Sirius VII-C;Sirius VII-C;;;;;;;;;;;;x
+b_sirius_vii_c_ADJ;Sirius VII-C;Sirius VII-C;;;;;;;;;;;;x
+c_procyon;Procyon;Procyon;;;;;;;;;;;;x
+c_procyon_ADJ;Procyonic;Procyonique;;;;;;;;;;;;x
+b_procyon_iii_b;Procyon III-B;Procyon III-B;;;;;;;;;;;;x
+b_procyon_iii_b_ADJ;Procyon III-B;Procyon III-B;;;;;;;;;;;;x
+b_procyon_iii_c;Procyon III-C;Procyon III-C;;;;;;;;;;;;x
+b_procyon_iii_c_ADJ;Procyon III-C;Procyon III-C;;;;;;;;;;;;x
+b_procyon_iii_d;Procyon III-D;Procyon III-D;;;;;;;;;;;;x
+b_procyon_iii_d_ADJ;Procyon III-D;Procyon III-D;;;;;;;;;;;;x
+b_procyon_iv;Procyon IV;Procyon IV;;;;;;;;;;;;x
+b_procyon_iv_ADJ;Procyon IV;Procyon IV;;;;;;;;;;;;x
+d_tau_ceti;Tau Ceti;Tau Ceti;;;;;;;;;;;;x
+d_tau_ceti_ADJ;Ceti;Ceti;;;;;;;;;;;;x
+c_tau_ceti;Tau Ceti;Tau Ceti;;;;;;;;;;;;x
+c_tau_ceti_ADJ;Ceti;Ceti;;;;;;;;;;;;x
+b_tau_ceti_iv;Tau Ceti IV;Tau Ceti IV;;;;;;;;;;;;x
+b_tau_ceti_iv_ADJ;Tau Ceti IV;Tau Ceti IV;;;;;;;;;;;;x
+b_tau_ceti_iv_b;Tau Ceti IV-B;Tau Ceti IV-B;;;;;;;;;;;;x
+b_tau_ceti_iv_b_ADJ;Tau Ceti IV-B;Tau Ceti IV-B;;;;;;;;;;;;x
+b_tau_ceti_iv_c;Tau Ceti IV-C;Tau Ceti IV-C;;;;;;;;;;;;x
+b_tau_ceti_iv_c_ADJ;Tau Ceti IV-C;Tau Ceti IV-C;;;;;;;;;;;;x
+b_tau_ceti_v;Tau Ceti V;Tau Ceti V;;;;;;;;;;;;x
+b_tau_ceti_v_ADJ;Tau Ceti V;Tau Ceti V;;;;;;;;;;;;x
+b_tau_ceti_v_c;Tau Ceti V-C;Tau Ceti V-C;;;;;;;;;;;;x
+b_tau_ceti_v_c_ADJ;Tau Ceti V-C;Tau Ceti V-C;;;;;;;;;;;;x
+b_tau_ceti_v_d;Tau Ceti V-D;Tau Ceti V-D;;;;;;;;;;;;x
+b_tau_ceti_v_d_ADJ;Tau Ceti V-D;Tau Ceti V-D;;;;;;;;;;;;x
+c_epsilon_eridani;Epsilon Eridani;Epsilon Eridani;;;;;;;;;;;;x
+c_epsilon_eridani_ADJ;Eridani;Eridani;;;;;;;;;;;;x
+b_epsilon_eridani_iii;Epsilon Eridani III;Epsilon Eridani III;;;;;;;;;;;;x
+b_epsilon_eridani_iii_ADJ;Epsilon Eridani III;Epsilon Eridani III;;;;;;;;;;;;x
+b_epsilon_eridani_iv;Epsilon Eridani IV;Epsilon Eridani IV;;;;;;;;;;;;x
+b_epsilon_eridani_iv_ADJ;Epsilon Eridani IV;Epsilon Eridani IV;;;;;;;;;;;;x
+b_epsilon_eridani_iv_b;Epsilon Eridani IV-B;Epsilon Eridani IV-B;;;;;;;;;;;;x
+b_epsilon_eridani_iv_b_ADJ;Epsilon Eridani IV-B;Epsilon Eridani IV-B;;;;;;;;;;;;x
+b_epsilon_eridani_v;Epsilon Eridani V;Epsilon Eridani V;;;;;;;;;;;;x
+b_epsilon_eridani_v_ADJ;Epsilon Eridani V;Epsilon Eridani V;;;;;;;;;;;;x
+c_eta_cassiopeia;Eta Cassiopeia;Eta Cassiopeia;;;;;;;;;;;;x
+c_eta_cassiopeia_ADJ;Cassiopeian;Cassiopéen;;;;;;;;;;;;x
+b_eta_cassiopeia_ii;Eta Cassiopeia II;Eta Cassiopeia II;;;;;;;;;;;;x
+b_eta_cassiopeia_ii_ADJ;Eta Cassiopeia II;Eta Cassiopeia II;;;;;;;;;;;;x
+b_eta_cassiopeia_ii_b;Eta Cassiopeia II-B;Eta Cassiopeia II-B;;;;;;;;;;;;x
+b_eta_cassiopeia_ii_b_ADJ;Eta Cassiopeia II-B;Eta Cassiopeia II-B;;;;;;;;;;;;x
+b_eta_cassiopeia_iii;Eta Cassiopeia III;Eta Cassiopeia III;;;;;;;;;;;;x
+b_eta_cassiopeia_iii_ADJ;Eta Cassiopeia III;Eta Cassiopeia III;;;;;;;;;;;;x
+b_eta_cassiopeia_iii_b;Eta Cassiopeia III-B;Eta Cassiopeia III-B;;;;;;;;;;;;x
+b_eta_cassiopeia_iii_b_ADJ;Eta Cassiopeia III-B;Eta Cassiopeia III-B;;;;;;;;;;;;x
+d_draconis;Draconis;Draconis;;;;;;;;;;;;x
+d_draconis_ADJ;Draconic;Draconique;;;;;;;;;;;;x
+c_sigma_draconis;Sigma Draconis;Sigma Draconis;;;;;;;;;;;;x
+c_sigma_draconis_ADJ;Draconic;Draconique;;;;;;;;;;;;x
+b_sigma_draconis_vi_c;Sigma Draconis VI-C;Sigma Draconis VI-C;;;;;;;;;;;;x
+b_sigma_draconis_vi_c_ADJ;Sigma Draconis VI-C;Sigma Draconis VI-C;;;;;;;;;;;;x
+b_sigma_draconis_vi_d;Sigma Draconis VI-D;Sigma Draconis VI-D;;;;;;;;;;;;x
+b_sigma_draconis_vi_d_ADJ;Sigma Draconis VI-D;Sigma Draconis VI-D;;;;;;;;;;;;x
+b_sigma_draconis_vi_f;Sigma Draconis VI-F;Sigma Draconis VI-F;;;;;;;;;;;;x
+b_sigma_draconis_vi_f_ADJ;Sigma Draconis VI-F;Sigma Draconis VI-F;;;;;;;;;;;;x
+b_sigma_draconis_vii_b;Sigma Draconis VII-B;Sigma Draconis VII-B;;;;;;;;;;;;x
+b_sigma_draconis_vii_b_ADJ;Sigma Draconis VII-B;Sigma Draconis VII-B;;;;;;;;;;;;x
+b_sigma_draconis_vii_d;Sigma Draconis VII-D;Sigma Draconis VII-D;;;;;;;;;;;;x
+b_sigma_draconis_vii_d_ADJ;Sigma Draconis VII-D;Sigma Draconis VII-D;;;;;;;;;;;;x
+c_epsilon_indi;Epsilon Indi;Epsilon Indi;;;;;;;;;;;;x
+c_epsilon_indi_ADJ;Indi;Indi;;;;;;;;;;;;x
+b_epsilon_indi_iii;Epsilon Indi III;Epsilon Indi III;;;;;;;;;;;;x
+b_epsilon_indi_iii_ADJ;Epsilon Indi III;Epsilon Indi III;;;;;;;;;;;;x
+b_epsilon_indi_iii_b;Epsilon Indi III-B;Epsilon Indi III-B;;;;;;;;;;;;x
+b_epsilon_indi_iii_b_ADJ;Epsilon Indi III-B;Epsilon Indi III-B;;;;;;;;;;;;x
+b_epsilon_indi_iv;Epsilon Indi IV;Epsilon Indi IV;;;;;;;;;;;;x
+b_epsilon_indi_iv_ADJ;Epsilon Indi IV;Epsilon Indi IV;;;;;;;;;;;;x
+b_epsilon_indi_v;Epsilon Indi V;Epsilon Indi V;;;;;;;;;;;;x
+b_epsilon_indi_v_ADJ;Epsilon Indi V;Epsilon Indi V;;;;;;;;;;;;x
+c_beta_hydri;Beta Hydri;Beta Hydri;;;;;;;;;;;;x
+c_beta_hydri_ADJ;Hydri;Hydri;;;;;;;;;;;;x
+b_beta_hydri_iii;Beta Hydri III;Beta Hydri III;;;;;;;;;;;;x
+b_beta_hydri_iii_ADJ;Beta Hydri III;Beta Hydri III;;;;;;;;;;;;x
+b_beta_hydri_iv;Beta Hydri IV;Beta Hydri IV;;;;;;;;;;;;x
+b_beta_hydri_iv_ADJ;Beta Hydri IV;Beta Hydri IV;;;;;;;;;;;;x
+b_beta_hydri_v;Beta Hydri V;Beta Hydri V;;;;;;;;;;;;x
+b_beta_hydri_v_ADJ;Beta Hydri V;Beta Hydri V;;;;;;;;;;;;x
+b_beta_hydri_v_b;Beta Hydri V-B;Beta Hydri V-B;;;;;;;;;;;;x
+b_beta_hydri_v_b_ADJ;Beta Hydri V-B;Beta Hydri V-B;;;;;;;;;;;;x
+c_delta_pavonis;Delta Pavonis;Delta Pavonis;;;;;;;;;;;;x
+c_delta_pavonis_ADJ;Pavonian;Pavonien;;;;;;;;;;;;x
+b_delta_pavonis_i;Delta Pavonis Prime;Delta Pavonis Prime;;;;;;;;;;;;x
+b_delta_pavonis_i_ADJ;Delta Pavonis Prime;Delta Pavonis Prime;;;;;;;;;;;;x
+b_delta_pavonis_ii;Delta Pavonis II;Delta Pavonis II;;;;;;;;;;;;x
+b_delta_pavonis_ii_ADJ;Delta Pavonis II;Delta Pavonis II;;;;;;;;;;;;x
+b_delta_pavonis_ii_b;Delta Pavonis II-B;Delta Pavonis II-B;;;;;;;;;;;;x
+b_delta_pavonis_ii_b_ADJ;Delta Pavonis II-B;Delta Pavonis II-B;;;;;;;;;;;;x
+b_delta_pavonis_iii;Delta Pavonis III;Delta Pavonis III;;;;;;;;;;;;x
+b_delta_pavonis_iii_ADJ;Delta Pavonis III;Delta Pavonis III;;;;;;;;;;;;x
+d_altair;Altair;Altair;;;;;;;;;;;;x
+d_altair_ADJ;Altairian;Altairien;;;;;;;;;;;;x
+c_altair;Altair;Altair;;;;;;;;;;;;x
+c_altair_ADJ;Altairian;Altairien;;;;;;;;;;;;x
+b_altair_iii;Altair III;Altair III;;;;;;;;;;;;x
+b_altair_iii_ADJ;Altair III;Altair III;;;;;;;;;;;;x
+b_altair_iv;Altair IV;Altair IV;;;;;;;;;;;;x
+b_altair_iv_ADJ;Altair IV;Altair IV;;;;;;;;;;;;x
+b_altair_v;Altair V;Altair V;;;;;;;;;;;;x
+b_altair_v_ADJ;Altair V;Altair V;;;;;;;;;;;;x
+b_altair_v_b;Altair V-B;Altair V-B;;;;;;;;;;;;x
+b_altair_v_b_ADJ;Altair V-B;Altair V-B;;;;;;;;;;;;x
+c_cygni;Cygni;Cygni;;;;;;;;;;;;x
+c_cygni_ADJ;Cygni;Cygni;;;;;;;;;;;;x
+b_cygni_iii;Cygni III;Cygni III;;;;;;;;;;;;x
+b_cygni_iii_ADJ;Cygni III;Cygni III;;;;;;;;;;;;x
+b_cygni_iii_b;Cygni III-B;Cygni III-B;;;;;;;;;;;;x
+b_cygni_iii_b_ADJ;Cygni III-B;Cygni III-B;;;;;;;;;;;;x
+b_cygni_iv;Cygni IV;Cygni IV;;;;;;;;;;;;x
+b_cygni_iv_ADJ;Cygni IV;Cygni IV;;;;;;;;;;;;x
+b_cygni_v;Cygni V;Cygni V;;;;;;;;;;;;x
+b_cygni_v_ADJ;Cygni V;Cygni V;;;;;;;;;;;;x
+k_xingjie;Xingjie;Xingjie;;;;;;;;;;;;x
+k_xingjie_ADJ;Xingjie;Xingjie;;;;;;;;;;;;x
+d_xingjie_fleet;Xingjie Space Force;Force Spatiale Xingjie;;;;;;;;;;;;x
+d_xingjie_fleet_ADJ;Xingjie Space Force;Force Spatiale Xingjie;;;;;;;;;;;;x
+k_cielia;Cielia;Cielia;;;;;;;;;;;;x
+k_cielia_ADJ;Cielian;Cielien;;;;;;;;;;;;x
+d_cielia_fleet;Cielian Armada;Armada Cielienne;;;;;;;;;;;;x
+d_cielia_fleet_ADJ;Cielian Armada;Armada Cielienne;;;;;;;;;;;;x
+k_al-samawat;al-Samawat;al-Samawat;;;;;;;;;;;;x
+k_al-samawat_ADJ;Samawati;Samawati;;;;;;;;;;;;x
+d_al-samawat_fleet;Samawati Guard;Garde Samawati;;;;;;;;;;;;x
+d_al-samawat_fleet_ADJ;Samawati Guard;Garde Samawati;;;;;;;;;;;;x
+k_zenye_nyota_angani;Zenye Nyota Angani;Zenye Nyota Angani;;;;;;;;;;;;x
+k_zenye_nyota_angani_ADJ;Angani;Angani;;;;;;;;;;;;x
+d_zenye_nyota_angani_fleet;Angani Armed Forces;Forces armées Angani;;;;;;;;;;;;x
+d_zenye_nyota_angani_fleet_ADJ;Angani Armed Forces;Forces armées Angani;;;;;;;;;;;;x
+k_frontier;Frontier;Bordure;;;;;;;;;;;;x
+k_frontier_ADJ;Frontier;Bordure;;;;;;;;;;;;x
+d_frontier_fleet;Frontier Space Command;Commandement Spatial de la Bordure;;;;;;;;;;;;x
+d_frontier_fleet_ADJ;Frontier Space Command;Commandement Spatial de la Bordure;;;;;;;;;;;;x
+k_centauri;Centauri Reach;Centauri Reach;;;;;;;;;;;;x
+k_centauri_ADJ;Centauri;Centauri;;;;;;;;;;;;x
+d_centauri_fleet;Centauri Rangers;Rangers Centauri;;;;;;;;;;;;x
+d_centauri_fleet_ADJ;Centauri Rangers;Rangers Centauri;;;;;;;;;;;;x
+b_weyland;Weyland Industries;Industries Weyland;;;;;;;;;;;;x
+b_weyland_ADJ;Weyland;Weyland;;;;;;;;;;;;x
+b_salazar;Salazar Shipping;Transports Salazar;;;;;;;;;;;;x
+b_salazar_ADJ;Salazar;Salazar;;;;;;;;;;;;x
+b_nazari;Nazari Industries;IndustriesNazari ;;;;;;;;;;;;x
+b_nazari_ADJ;Nazari;Nazari;;;;;;;;;;;;x
+b_kojima;Kojima Robotics;Kojima Robotique;;;;;;;;;;;;x
+b_kojima_ADJ;Kojima;Kojima;;;;;;;;;;;;x
+b_afolayan;Afolayan Corporation;Corporation Afolayan ;;;;;;;;;;;;x
+b_afolayan_ADJ;Afolayan;Afolayan;;;;;;;;;;;;x
